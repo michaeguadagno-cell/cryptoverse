@@ -37,7 +37,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:fl
 .btn-ghost{background:rgba(255,255,255,0.05);color:var(--text);padding:13px 28px;border-radius:12px;font-weight:600;font-size:14px;border:1px solid var(--border);cursor:pointer;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
 .btn-ghost:hover{background:rgba(124,58,237,0.1);border-color:var(--primary)}
 .hero-coins{display:flex;justify-content:center;gap:16px;margin-top:52px;flex-wrap:wrap;position:relative;z-index:1}
-.coin-float{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;animation:float 3s ease-in-out infinite;border:2px solid rgba(255,255,255,0.1);background:var(--surface);cursor:default;transition:transform .2s}
+.coin-float{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;animation:float 3s ease-in-out infinite;border:2px solid rgba(255,255,255,0.1);background:var(--surface);cursor:default;transition:transform .2s;overflow:hidden}.coin-float img{width:36px;height:36px;object-fit:contain;border-radius:8px}.coin-float.coin-text{font-size:24px}
 .coin-float:hover{transform:scale(1.2) translateY(-4px)}
 .coin-float:nth-child(1){animation-delay:0s}.coin-float:nth-child(2){animation-delay:.3s}.coin-float:nth-child(3){animation-delay:.6s}.coin-float:nth-child(4){animation-delay:.9s}.coin-float:nth-child(5){animation-delay:1.2s}.coin-float:nth-child(6){animation-delay:1.5s}.coin-float:nth-child(7){animation-delay:1.8s}.coin-float:nth-child(8){animation-delay:2.1s}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
@@ -59,7 +59,7 @@ section{padding:80px 40px}
 .char-card.hidden{display:none}
 .char-card-bg{height:120px;position:relative;display:flex;align-items:center;justify-content:center}
 .char-card-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,var(--surface) 100%)}
-.char-emoji{font-size:60px;position:relative;z-index:1;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5));transition:transform .3s}
+.char-emoji{font-size:60px;position:relative;z-index:1;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5));transition:transform .3s;display:flex;align-items:center;justify-content:center}.char-emoji img{width:60px;height:60px;object-fit:contain}
 .char-card:hover .char-emoji{transform:scale(1.1)}
 .char-type-badge{position:absolute;top:10px;right:10px;padding:3px 9px;border-radius:100px;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;z-index:2;backdrop-filter:blur(8px)}
 .badge-hero{background:rgba(16,185,129,0.2);color:var(--green);border:1px solid rgba(16,185,129,0.3)}
@@ -175,14 +175,14 @@ footer{border-top:1px solid var(--border);padding:44px 40px 26px;text-align:cent
       <a href="#waitlist" class="btn-ghost">Connect Wallet</a>
     </div>
     <div class="hero-coins">
-      <div class="coin-float">🪙</div>
-      <div class="coin-float">💜</div>
-      <div class="coin-float">🔵</div>
-      <div class="coin-float">🌟</div>
-      <div class="coin-float">🐕</div>
-      <div class="coin-float">🗿</div>
-      <div class="coin-float">📖</div>
-      <div class="coin-float">🔷</div>
+      <div class="coin-float"><img src="images/coins/btc.png" alt="Bitcoin"></div>
+      <div class="coin-float"><img src="images/coins/eth.png" alt="Ethereum"></div>
+      <div class="coin-float"><img src="images/coins/xrp.png" alt="XRP"></div>
+      <div class="coin-float"><img src="images/coins/ada.png" alt="Cardano"></div>
+      <div class="coin-float"><img src="images/coins/doge.png" alt="Dogecoin"></div>
+      <div class="coin-float coin-text">🗿</div>
+      <div class="coin-float coin-text">📖</div>
+      <div class="coin-float"><img src="images/coins/sol.png" alt="Solana"></div>
     </div>
   </div>
   <div class="hero-scroll"><span style="font-size:10px;letter-spacing:2px;text-transform:uppercase;">Scroll</span><span>↓</span></div>
@@ -215,7 +215,7 @@ footer{border-top:1px solid var(--border);padding:44px 40px 26px;text-align:cent
 
     <div class="char-card" data-type="hero" data-name="bitcoin" onclick="openModal('btc')">
       <div class="char-card-bg" style="background:linear-gradient(135deg,#F7931A,#FFB347);">
-        <span class="char-emoji">🪙</span>
+        <span class="char-emoji"><img src="images/coins/btc.png" alt="Bitcoin"></span>
         <span class="char-type-badge badge-hero">Hero</span>
       </div>
       <div class="char-body">
@@ -228,7 +228,7 @@ footer{border-top:1px solid var(--border);padding:44px 40px 26px;text-align:cent
 
     <div class="char-card" data-type="hero" data-name="ethereum" onclick="openModal('eth')">
       <div class="char-card-bg" style="background:linear-gradient(135deg,#627EEA,#8B9FE8);">
-        <span class="char-emoji">💜</span>
+        <span class="char-emoji"><img src="images/coins/eth.png" alt="Ethereum"></span>
         <span class="char-type-badge badge-hero">Hero</span>
       </div>
       <div class="char-body">
@@ -241,7 +241,7 @@ footer{border-top:1px solid var(--border);padding:44px 40px 26px;text-align:cent
 
     <div class="char-card" data-type="hero" data-name="xrp" onclick="openModal('xrp')">
       <div class="char-card-bg" style="background:linear-gradient(135deg,#00AAE4,#005070);">
-        <span class="char-emoji">🔵</span>
+        <span class="char-emoji"><img src="images/coins/xrp.png" alt="XRP"></span>
         <span class="char-type-badge badge-hero">Hero</span>
       </div>
       <div class="char-body">
@@ -254,7 +254,7 @@ footer{border-top:1px solid var(--border);padding:44px 40px 26px;text-align:cent
 
     <div class="char-card" data-type="hero" data-name="solana" onclick="openModal('sol')">
       <div class="char-card-bg" style="background:linear-gradient(135deg,#9945FF,#14F195);">
-        <span class="char-emoji">🌟</span>
+        <span class="char-emoji"><img src="images/coins/sol.png" alt="Solana"></span>
         <span class="char-type-badge badge-hero">Hero</span>
       </div>
       <div class="char-body">
@@ -267,7 +267,7 @@ footer{border-top:1px solid var(--border);padding:44px 40px 26px;text-align:cent
 
     <div class="char-card" data-type="hero" data-name="cardano" onclick="openModal('ada')">
       <div class="char-card-bg" style="background:linear-gradient(135deg,#0033AD,#0033AD40);">
-        <span class="char-emoji">🔷</span>
+        <span class="char-emoji"><img src="images/coins/ada.png" alt="Cardano"></span>
         <span class="char-type-badge badge-hero">Hero</span>
       </div>
       <div class="char-body">
@@ -280,7 +280,7 @@ footer{border-top:1px solid var(--border);padding:44px 40px 26px;text-align:cent
 
     <div class="char-card" data-type="hero" data-name="doge" onclick="openModal('doge')">
       <div class="char-card-bg" style="background:linear-gradient(135deg,#C2A633,#8B7020);">
-        <span class="char-emoji">🐕</span>
+        <span class="char-emoji"><img src="images/coins/doge.png" alt="Dogecoin"></span>
         <span class="char-type-badge badge-hero">Hero</span>
       </div>
       <div class="char-body">
