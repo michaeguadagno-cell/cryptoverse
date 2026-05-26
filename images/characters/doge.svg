@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="doge-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d2d1a"/>
+      <stop offset="100%" style="stop-color:#1a1a0d"/>
+    </linearGradient>
+    <linearGradient id="doge-fur" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5D77A"/>
+      <stop offset="50%" style="stop-color:#C2A633"/>
+      <stop offset="100%" style="stop-color:#8B7020"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#doge-bg)" rx="20"/>
+
+  <!-- Doge body (Shiba Inu) -->
+  <ellipse cx="200" cy="230" rx="100" ry="90" fill="url(#doge-fur)" filter="url(#shadow)"/>
+
+  <!-- Ears -->
+  <ellipse cx="120" cy="130" rx="35" ry="50" fill="#C2A633" transform="rotate(-20, 120, 130)"/>
+  <ellipse cx="120" cy="130" rx="25" ry="35" fill="#E8C84A" transform="rotate(-20, 120, 130)"/>
+  <ellipse cx="280" cy="130" rx="35" ry="50" fill="#C2A633" transform="rotate(20, 280, 130)"/>
+  <ellipse cx="280" cy="130" rx="25" ry="35" fill="#E8C84A" transform="rotate(20, 280, 130)"/>
+
+  <!-- Face -->
+  <ellipse cx="200" cy="190" rx="80" ry="70" fill="#F5D77A"/>
+
+  <!-- Muzzle -->
+  <ellipse cx="200" cy="220" rx="40" ry="30" fill="#FFF5D6"/>
+
+  <!-- Eyes -->
+  <ellipse cx="160" cy="180" rx="20" ry="22" fill="#FFF"/>
+  <ellipse cx="240" cy="180" rx="20" ry="22" fill="#FFF"/>
+  <ellipse cx="162" cy="182" rx="12" ry="14" fill="#4A3000"/>
+  <ellipse cx="242" cy="182" rx="12" ry="14" fill="#4A3000"/>
+  <circle cx="165" cy="178" r="5" fill="#000"/>
+  <circle cx="245" cy="178" r="5" fill="#000"/>
+  <circle cx="167" cy="176" r="2" fill="#FFF"/>
+  <circle cx="247" cy="176" r="2" fill="#FFF"/>
+
+  <!-- Eyebrows (raised, confused look) -->
+  <path d="M140,155 Q160,145 180,155" fill="none" stroke="#8B7020" stroke-width="4" stroke-linecap="round"/>
+  <path d="M220,155 Q240,145 260,155" fill="none" stroke="#8B7020" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Sunglasses -->
+  <rect x="135" y="170" width="55" height="30" rx="5" fill="#1a1a2e" stroke="#FFD700" stroke-width="2"/>
+  <rect x="210" y="170" width="55" height="30" rx="5" fill="#1a1a2e" stroke="#FFD700" stroke-width="2"/>
+  <line x1="190" y1="185" x2="210" y2="185" stroke="#FFD700" stroke-width="3"/>
+
+  <!-- Nose -->
+  <ellipse cx="200" cy="210" rx="12" ry="8" fill="#4A3000"/>
+
+  <!-- Mouth (classic Doge grin) -->
+  <path d="M180,235 Q200,255 220,235" fill="none" stroke="#4A3000" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Tongue sticking out -->
+  <ellipse cx="200" cy="250" rx="15" ry="10" fill="#FF6B8A"/>
+
+  <!-- Diamond paw pendant -->
+  <g transform="translate(200, 290)" filter="url(#glow)">
+    <polygon points="0,-20 15,0 0,20 -15,0" fill="#00D4FF" stroke="#FFF" stroke-width="1"/>
+    <polygon points="0,-12 9,0 0,12 -9,0" fill="#80EEFF"/>
+  </g>
+
+  <!-- Paws -->
+  <ellipse cx="130" cy="310" rx="30" ry="20" fill="#C2A633"/>
+  <ellipse cx="270" cy="310" rx="30" ry="20" fill="#C2A633"/>
+
+  <!-- Character name -->
+  <text x="200" y="375" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#C2A633" text-anchor="middle">DOGE</text>
+  <text x="200" y="395" font-family="Arial, sans-serif" font-size="14" fill="#888" text-anchor="middle">DOGECOIN</text>
+</svg>

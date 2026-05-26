@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="xrp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001520"/>
+      <stop offset="100%" style="stop-color:#000d10"/>
+    </linearGradient>
+    <linearGradient id="xrp-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00AAE4"/>
+      <stop offset="50%" style="stop-color:#0088BB"/>
+      <stop offset="100%" style="stop-color:#005070"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#xrp-bg)" rx="20"/>
+
+  <!-- Ripple effect rings -->
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#00AAE4" stroke-width="1" opacity="0.15"/>
+  <circle cx="200" cy="200" r="130" fill="none" stroke="#00AAE4" stroke-width="1" opacity="0.1"/>
+  <circle cx="200" cy="200" r="110" fill="none" stroke="#00AAE4" stroke-width="1" opacity="0.08"/>
+
+  <!-- Main body -->
+  <circle cx="200" cy="200" r="90" fill="url(#xrp-body)" filter="url(#shadow)"/>
+  <circle cx="200" cy="200" r="90" fill="none" stroke="#00AAE4" stroke-width="3"/>
+
+  <!-- XRP ripple symbol -->
+  <g transform="translate(200,200)">
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#FFF" stroke-width="8" opacity="0.3"/>
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#FFF" stroke-width="6" opacity="0.5"/>
+    <circle cx="0" cy="0" r="20" fill="#FFF" opacity="0.8"/>
+    <path d="M-35,-48 Q0,-75 35,-48" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round"/>
+    <path d="M-50,-32 Q0,-60 50,-32" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round"/>
+    <path d="M-65,-16 Q0,-45 65,-16" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Swagger eyes -->
+  <ellipse cx="170" cy="190" rx="18" ry="12" fill="#FFF"/>
+  <ellipse cx="230" cy="190" rx="18" ry="12" fill="#FFF"/>
+  <circle cx="170" cy="190" r="8" fill="#00AAE4"/>
+  <circle cx="230" cy="190" r="8" fill="#00AAE4"/>
+  <circle cx="170" cy="190" r="3" fill="#FFF"/>
+  <circle cx="230" cy="190" r="3" fill="#FFF"/>
+
+  <!-- Cool smirk -->
+  <path d="M175,225 Q200,240 225,225" fill="none" stroke="#FFF" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Transfer arrows -->
+  <g filter="url(#glow)" opacity="0.7">
+    <path d="M320,200 L360,200 L350,190 M360,200 L350,210" stroke="#00AAE4" stroke-width="3" stroke-linecap="round"/>
+    <path d="M80,200 L40,200 L50,190 M40,200 L50,210" stroke="#00AAE4" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Character name -->
+  <text x="200" y="375" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#00AAE4" text-anchor="middle">XRP</text>
+  <text x="200" y="395" font-family="Arial, sans-serif" font-size="14" fill="#0088BB" text-anchor="middle">RIPPLE • THE TRANSFER</text>
+</svg>

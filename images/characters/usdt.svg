@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="usdt-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a0a"/>
+      <stop offset="100%" style="stop-color:#0d0d05"/>
+    </linearGradient>
+    <linearGradient id="usdt-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="50%" style="stop-color:#F0B90B"/>
+      <stop offset="100%" style="stop-color:#C09000"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#usdt-bg)" rx="20"/>
+
+  <!-- Liquid gold glow -->
+  <circle cx="200" cy="200" r="140" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.15"/>
+
+  <!-- Main body - towering -->
+  <path d="M120,400 L130,200 Q130,120 200,120 Q270,120 270,200 L280,400 Z" fill="url(#usdt-body)" filter="url(#shadow)"/>
+
+  <!-- Perfect suit lines -->
+  <line x1="200" y1="120" x2="200" y2="400" stroke="#C09000" stroke-width="2" opacity="0.5"/>
+  <path d="M130,180 Q200,200 270,180" fill="none" stroke="#C09000" stroke-width="2"/>
+  <path d="M130,280 Q200,300 270,280" fill="none" stroke="#C09000" stroke-width="2"/>
+
+  <!-- Head - cold, calculating -->
+  <circle cx="200" cy="95" r="40" fill="#F0B90B" filter="url(#shadow)"/>
+
+  <!-- Calculator eyes -->
+  <rect x="175" y="80" width="20" height="15" rx="2" fill="#1a1a0a"/>
+  <rect x="205" y="80" width="20" height="15" rx="2" fill="#1a1a0a"/>
+  <text x="185" y="92" font-family="monospace" font-size="10" fill="#00FF00" text-anchor="middle">1</text>
+  <text x="215" y="92" font-family="monospace" font-size="10" fill="#00FF00" text-anchor="middle">1</text>
+
+  <!-- Stern expression -->
+  <line x1="180" y1="110" x2="220" y2="110" stroke="#1a1a0a" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Stack of fiat -->
+  <g transform="translate(310, 200)">
+    <rect x="-10" y="-60" width="20" height="120" fill="#228B22" opacity="0.8"/>
+    <rect x="-15" y="-55" width="30" height="5" fill="#006400"/>
+    <rect x="-15" y="-45" width="30" height="5" fill="#006400"/>
+    <rect x="-15" y="-35" width="30" height="5" fill="#006400"/>
+    <rect x="-15" y="-25" width="30" height="5" fill="#006400"/>
+    <rect x="-15" y="-15" width="30" height="5" fill="#006400"/>
+    <rect x="-15" y="-5" width="30" height="5" fill="#006400"/>
+    <rect x="-15" y="5" width="30" height="5" fill="#006400"/>
+    <rect x="-15" y="15" width="30" height="5" fill="#006400"/>
+    <rect x="-15" y="25" width="30" height="5" fill="#006400"/>
+    <rect x="-15" y="35" width="30" height="5" fill="#006400"/>
+    <rect x="-15" y="45" width="30" height="5" fill="#006400"/>
+    <rect x="-15" y="55" width="30" height="5" fill="#006400"/>
+  </g>
+
+  <!-- Tether logo on chest -->
+  <g transform="translate(200, 230)">
+    <circle cx="0" cy="0" r="25" fill="#F0B90B" stroke="#FFF" stroke-width="2"/>
+    <text x="0" y="6" font-family="Arial Black" font-size="16" fill="#1a1a0a" text-anchor="middle" font-weight="bold">₮</text>
+  </g>
+
+  <!-- Character name -->
+  <text x="200" y="375" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#F0B90B" text-anchor="middle">USDT</text>
+  <text x="200" y="395" font-family="Arial, sans-serif" font-size="12" fill="#888" text-anchor="middle">TETHER • THE BANKER</text>
+</svg>

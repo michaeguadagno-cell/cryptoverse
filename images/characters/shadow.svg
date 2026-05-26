@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="shadow-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000"/>
+      <stop offset="100%" style="stop-color:#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="shadow-cloak" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a"/>
+      <stop offset="100%" style="stop-color:#000000"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.8"/>
+    </filter>
+    <filter id="darkness">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- Pure black background -->
+  <rect width="400" height="400" fill="url(#shadow-bg)"/>
+
+  <!-- Eerie glow from within -->
+  <circle cx="200" cy="180" r="100" fill="none" stroke="#F7931A" stroke-width="1" opacity="0.1" filter="url(#glow)"/>
+  <circle cx="200" cy="180" r="70" fill="none" stroke="#F7931A" stroke-width="1" opacity="0.15" filter="url(#glow)"/>
+
+  <!-- Shadow cloak body -->
+  <path d="M80,400 L120,180 Q120,100 200,80 Q280,100 280,180 L320,400 Z" fill="url(#shadow-cloak)" filter="url(#shadow)"/>
+
+  <!-- Hood -->
+  <path d="M100,180 Q100,60 200,40 Q300,60 300,180 Q280,120 200,110 Q120,120 100,180" fill="#0a0a0a" stroke="#1a1a1a" stroke-width="2"/>
+
+  <!-- Face shadow (void where face should be) -->
+  <ellipse cx="200" cy="160" rx="50" ry="60" fill="#000"/>
+
+  <!-- Glowing eyes (like Bitcoin in early days) -->
+  <g filter="url(#glow)">
+    <ellipse cx="180" cy="150" rx="8" ry="6" fill="#F7931A"/>
+    <ellipse cx="220" cy="150" rx="8" ry="6" fill="#F7931A"/>
+  </g>
+
+  <!-- Mining code hands -->
+  <g transform="translate(200, 280)">
+    <path d="M-80,100 L-120,120 L-115,125 L-125,140 L-75,115" fill="none" stroke="#333" stroke-width="8" stroke-linecap="round"/>
+    <path d="M80,100 L120,120 L115,125 L125,140 L75,115" fill="none" stroke="#333" stroke-width="8" stroke-linecap="round"/>
+    <!-- Code streams in hands -->
+    <g opacity="0.4">
+      <text x="-100" y="80" font-family="monospace" font-size="8" fill="#F7931A">01001</text>
+      <text x="70" y="80" font-family="monospace" font-size="8" fill="#F7931A">11010</text>
+    </g>
+  </g>
+
+  <!-- Ancient Bitcoin symbol floating -->
+  <g transform="translate(200, 100)" filter="url(#glow)">
+    <text x="0" y="10" font-family="Arial Black" font-size="30" fill="#F7931A" text-anchor="middle" opacity="0.3">₿</text>
+  </g>
+
+  <!-- Mysterious aura particles -->
+  <g filter="url(#darkness)" opacity="0.3">
+    <circle cx="100" cy="100" r="3" fill="#F7931A"/>
+    <circle cx="300" cy="120" r="2" fill="#F7931A"/>
+    <circle cx="80" cy="250" r="2" fill="#F7931A"/>
+    <circle cx="320" cy="300" r="3" fill="#F7931A"/>
+    <circle cx="150" cy="50" r="2" fill="#F7931A"/>
+    <circle cx="250" cy="60" r="2" fill="#F7931A"/>
+  </g>
+
+  <!-- Whispered words -->
+  <text x="200" y="360" font-family="Georgia, serif" font-size="12" fill="#F7931A" text-anchor="middle" opacity="0.4" font-style="italic">"You're not ready."</text>
+
+  <!-- Character name (barely visible) -->
+  <text x="200" y="375" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1a1a1a" text-anchor="middle">THE SHADOW</text>
+  <text x="200" y="395" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">OF SATOSHI</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="hp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a051a"/>
+      <stop offset="100%" style="stop-color:#0d030d"/>
+    </linearGradient>
+    <linearGradient id="hp-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="50%" style="stop-color:#FFA500"/>
+      <stop offset="100%" style="stop-color:#FF8C00"/>
+    </linearGradient>
+    <linearGradient id="hp-hair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#FFA500"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#hp-bg)" rx="20"/>
+
+  <!-- Sweet aura -->
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.15"/>
+
+  <!-- Honeypot body (seductive coin) -->
+  <circle cx="200" cy="220" r="80" fill="url(#hp-body)" filter="url(#shadow)"/>
+  <circle cx="200" cy="220" r="80" fill="none" stroke="#FFF" stroke-width="2" opacity="0.5"/>
+
+  <!-- Inner glow -->
+  <circle cx="200" cy="220" r="60" fill="#FFF8DC" opacity="0.3"/>
+
+  <!-- Flowing data hair -->
+  <g filter="url(#glow)">
+    <path d="M100,180 Q80,120 120,100 Q150,80 200,70 Q250,80 280,100 Q320,120 300,180" fill="none" stroke="url(#hp-hair)" stroke-width="8"/>
+    <path d="M90,190 Q70,140 100,110 Q130,85 180,75" fill="none" stroke="#FFD700" stroke-width="5"/>
+    <path d="M310,190 Q330,140 300,110 Q270,85 220,75" fill="none" stroke="#FFD700" stroke-width="5"/>
+    <path d="M120,100 Q150,60 200,50 Q250,60 280,100" fill="none" stroke="#FFA500" stroke-width="4"/>
+  </g>
+
+  <!-- Seductive eyes -->
+  <ellipse cx="170" cy="210" rx="18" ry="12" fill="#FFF"/>
+  <ellipse cx="230" cy="210" rx="18" ry="12" fill="#FFF"/>
+  <circle cx="175" cy="212" r="8" fill="#FF8C00" filter="url(#glow)"/>
+  <circle cx="235" cy="212" r="8" fill="#FF8C00" filter="url(#glow)"/>
+  <circle cx="177" cy="210" r="3" fill="#FFF"/>
+  <circle cx="237" cy="210" r="3" fill="#FFF"/>
+
+  <!-- Luring smile -->
+  <path d="M170,245 Q200,270 230,245" fill="none" stroke="#FFF" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Yield promise aura -->
+  <g opacity="0.7" filter="url(#glow)">
+    <text x="200" y="200" font-family="Arial" font-size="40" fill="#FFF" text-anchor="middle" opacity="0.9">%</text>
+    <text x="200" y="200" font-family="Arial" font-size="40" fill="#FFF" text-anchor="middle" opacity="0.9">%</text>
+  </g>
+
+  <!-- Honey drip -->
+  <ellipse cx="260" cy="310" rx="8" ry="15" fill="#FFD700" filter="url(#glow)"/>
+  <ellipse cx="258" cy="320" rx="5" ry="10" fill="#FFA500" opacity="0.8"/>
+
+  <!-- Trap sign -->
+  <g transform="translate(200, 330)">
+    <text x="0" y="0" font-family="Arial" font-size="14" fill="#FFD700" text-anchor="middle" filter="url(#glow)">"Just hold..."</text>
+  </g>
+
+  <!-- Character name -->
+  <text x="200" y="375" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFD700" text-anchor="middle">HONEY POT</text>
+  <text x="200" y="395" font-family="Arial, sans-serif" font-size="12" fill="#FF8C00" text-anchor="middle">THE TRAP • THE LURE</text>
+</svg>

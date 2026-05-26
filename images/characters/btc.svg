@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="btc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0d0d1a"/>
+    </linearGradient>
+    <linearGradient id="coin-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB347"/>
+      <stop offset="50%" style="stop-color:#F7931A"/>
+      <stop offset="100%" style="stop-color:#CC7000"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#btc-bg)" rx="20"/>
+
+  <!-- Glow ring behind coin -->
+  <circle cx="200" cy="200" r="130" fill="none" stroke="#F7931A" stroke-width="2" opacity="0.3" filter="url(#glow)"/>
+
+  <!-- Main BTC coin body -->
+  <circle cx="200" cy="200" r="110" fill="url(#coin-gold)" filter="url(#shadow)"/>
+  <circle cx="200" cy="200" r="110" fill="none" stroke="#FFD700" stroke-width="3" opacity="0.6"/>
+
+  <!-- Inner coin detail -->
+  <circle cx="200" cy="200" r="90" fill="none" stroke="#CC7000" stroke-width="2"/>
+
+  <!-- Bitcoin B symbol -->
+  <text x="200" y="175" font-family="Arial Black, sans-serif" font-size="80" font-weight="bold" fill="#FFFFFF" text-anchor="middle" filter="url(#shadow)">₿</text>
+  <text x="200" y="175" font-family="Arial Black, sans-serif" font-size="80" font-weight="bold" fill="#FFFFFF" text-anchor="middle" opacity="0.9">₿</text>
+
+  <!-- Crown on top -->
+  <g transform="translate(200, 75)" filter="url(#glow)">
+    <path d="M-40,30 L-50,0 L-30,15 L0,-15 L30,15 L50,0 L40,30 Z" fill="#FFD700" stroke="#CC7000" stroke-width="2"/>
+    <circle cx="-50" cy="0" r="6" fill="#FFD700"/>
+    <circle cx="0" cy="-15" r="8" fill="#FFD700"/>
+    <circle cx="50" cy="0" r="6" fill="#FFD700"/>
+  </g>
+
+  <!-- Regal beard wisps -->
+  <path d="M140,280 Q150,320 140,340" fill="none" stroke="#D4A017" stroke-width="3" opacity="0.6"/>
+  <path d="M160,290 Q165,330 155,350" fill="none" stroke="#D4A017" stroke-width="3" opacity="0.5"/>
+  <path d="M240,290 Q235,330 245,350" fill="none" stroke="#D4A017" stroke-width="3" opacity="0.5"/>
+  <path d="M260,280 Q250,320 260,340" fill="none" stroke="#D4A017" stroke-width="3" opacity="0.6"/>
+
+  <!-- Wise eyes (invisible overlay for character) -->
+  <ellipse cx="170" cy="200" rx="15" ry="10" fill="#1a1a2e"/>
+  <ellipse cx="230" cy="200" rx="15" ry="10" fill="#1a1a2e"/>
+  <circle cx="173" cy="200" r="5" fill="#FFD700"/>
+  <circle cx="233" cy="200" r="5" fill="#FFD700"/>
+
+  <!-- Character name -->
+  <text x="200" y="375" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#F7931A" text-anchor="middle">BITCOIN</text>
+
+  <!-- Ticker -->
+  <text x="200" y="395" font-family="Arial, sans-serif" font-size="14" fill="#888" text-anchor="middle">BTC</text>
+</svg>

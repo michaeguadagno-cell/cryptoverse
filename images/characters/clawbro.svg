@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="claw-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a2e"/>
+      <stop offset="100%" style="stop-color:#0d0520"/>
+    </linearGradient>
+    <linearGradient id="claw-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED"/>
+      <stop offset="50%" style="stop-color:#6D28D9"/>
+      <stop offset="100%" style="stop-color:#5B21B6"/>
+    </linearGradient>
+    <linearGradient id="claw-accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4"/>
+      <stop offset="100%" style="stop-color:#0891B2"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#claw-bg)" rx="20"/>
+
+  <!-- Mystical aura -->
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.2"/>
+  <circle cx="200" cy="200" r="130" fill="none" stroke="#06B6D4" stroke-width="1" opacity="0.15"/>
+
+  <!-- Meme warrior body -->
+  <path d="M130,400 L140,250 Q140,180 200,160 Q260,180 260,250 L270,400 Z" fill="url(#claw-body)" filter="url(#shadow)"/>
+
+  <!-- Claw marks on chest -->
+  <g transform="translate(200, 280)">
+    <path d="M-20,-30 L-10,10 L-20,0 L-5,20" stroke="#06B6D4" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M-5,-35 L0,5" stroke="#06B6D4" stroke-width="4" stroke-linecap="round"/>
+    <path d="M10,-30 L5,10 L15,0 L10,20" stroke="#06B6D4" stroke-width="4" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Head - stoic meme warrior -->
+  <circle cx="200" cy="130" r="50" fill="url(#claw-body)" filter="url(#shadow)"/>
+
+  <!-- Mysterious eyes -->
+  <ellipse cx="175" cy="125" rx="12" ry="10" fill="#06B6D4" filter="url(#glow)"/>
+  <ellipse cx="225" cy="125" rx="12" ry="10" fill="#06B6D4" filter="url(#glow)"/>
+  <circle cx="175" cy="125" r="5" fill="#FFF"/>
+  <circle cx="225" cy="125" r="5" fill="#FFF"/>
+
+  <!-- Stoic expression -->
+  <line x1="180" y1="150" x2="220" y2="150" stroke="#1a0a2e" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- ClawBro symbol (C with claws) -->
+  <g transform="translate(200, 230)">
+    <circle cx="0" cy="0" r="35" fill="#0d0520" stroke="#06B6D4" stroke-width="3"/>
+    <text x="0" y="12" font-family="Arial Black" font-size="35" fill="#7C3AED" text-anchor="middle">C</text>
+    <!-- Claw scratches -->
+    <path d="M-25,20 L-20,40 M-15,22 L-10,42 M-5,23 L0,43" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Floating knowledge scrolls -->
+  <g transform="translate(310, 150) rotate(15)" filter="url(#glow)">
+    <rect x="-15" y="-40" width="30" height="80" rx="3" fill="#FFF8DC" stroke="#7C3AED" stroke-width="2"/>
+    <line x1="-10" y1="-30" x2="10" y2="-30" stroke="#7C3AED" stroke-width="1.5"/>
+    <line x1="-10" y1="-20" x2="8" y2="-20" stroke="#7C3AED" stroke-width="1.5"/>
+    <line x1="-10" y1="-10" x2="10" y2="-10" stroke="#7C3AED" stroke-width="1.5"/>
+    <text x="0" y="5" font-family="serif" font-size="8" fill="#7C3AED" text-anchor="middle">TAX</text>
+    <text x="0" y="18" font-family="serif" font-size="8" fill="#7C3AED" text-anchor="middle">101</text>
+  </g>
+
+  <!-- Raised claw hand -->
+  <g transform="translate(290, 280)">
+    <ellipse cx="0" cy="0" rx="25" ry="20" fill="#7C3AED"/>
+    <path d="M-15,-25 L-18,-45 M-5,-28 L-5,-50 M5,-28 L5,-50 M15,-25 L18,-45" stroke="#06B6D4" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Character name -->
+  <text x="200" y="375" font-family="Arial Black, sans-serif" font-size="24" fill="#7C3AED" text-anchor="middle">CLAWBRO</text>
+  <text x="200" y="395" font-family="Arial, sans-serif" font-size="12" fill="#06B6D4" text-anchor="middle">THE MEME WARRIOR</text>
+</svg>
